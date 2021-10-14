@@ -63,4 +63,6 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/assets/adminlte/dist/js/pages/dashboard.js"></script>
 
+<?php $this->renderSection('myscript'); ?>
+
 </html>
