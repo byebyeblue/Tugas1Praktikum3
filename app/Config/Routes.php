@@ -59,12 +59,12 @@ $routes->get('/about', function(){
 $routes->get('/admin', 'Templating::index');
 $routes->get('/admin/posts', 'AdminPostController::index');
 $routes->get('/admin/posts/create', 'AdminPostController::create');
-$routes->get('/admin/posts/store', 'AdminPostController::store');
+$routes->post('/admin/posts/store', 'AdminPostController::store');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
- *
+ *s
  * There will often be times that you need additional routing and you
  * need it to be able to override any defaults in this file. Environment
  * based routes is one such time. require() additional route files here
