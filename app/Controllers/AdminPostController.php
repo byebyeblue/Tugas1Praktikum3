@@ -100,6 +100,7 @@ class AdminPostController extends BaseController
     
     public function edit($slug)
     {
+        session();
         $data = [
             'validation' => \Config\Services::validation(),
             'posts' => $this->PostModel->getPosts($slug)
