@@ -60,6 +60,10 @@ $routes->get('/admin', 'Templating::index');
 $routes->get('/admin/posts', 'AdminPostController::index');
 $routes->get('/admin/posts/create', 'AdminPostController::create');
 $routes->post('/admin/posts/store', 'AdminPostController::store');
+$routes->get('/admin/posts/edit/(:any)', 'AdminPostController::edit/$1');
+$routes->post('/admin/posts/update/(:any)', 'AdminPostController::update/$1');
+$routes->delete('/admin/posts/(:any)', 'AdminPostController::delete/$1');
+// $routes->get('/admin/posts/delete/(:any)', 'AdminPostController::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

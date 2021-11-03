@@ -10,4 +10,11 @@ class PostModel extends Model
     protected $primaryKey           = 'post_id';
     protected $allowedFields        = ['judul', 'deskripsi', 'gambar', 'author', 'kategori', 'slug', 'created_at', 'updated_at'];
     protected $useTimestamps        = true;
+    
+    public function getPosts($slug = false){
+        if($slug == false){
+            return $this->findAll();
+        }
+        return $this->where(['slug' => $slug])->first();
+    }
 }
